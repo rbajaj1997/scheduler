@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Event Scheduler</title>
+    </head>
+
+    <body class="">
+        <h1>Scheduler</h1>
+        <main>
+            <button class="create-event">Create</button>
+        </main>
+        <div class="new-event-modal hidden">
+            <form id="new-event-form">
+                <label for="title">Event Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Enter title"
+                    required
+                />
+                <br />
+                <label for="date">Event Time</label>
+                <input
+                    type="datetime-local"
+                    id="date"
+                    name="date"
+                    placeholder="Enter datetime"
+                    required
+                />
+                <br />
+                <br />
+                <button type="submit">Create New Event</button>
+                <button class="close--btn">Close</button>
+            </form>
+        </div>
+        <div class="calendar"></div>
+
+        <template id="day-column">
+            <div class="calendar--column">
+                <div class="calenday--day_name"></div>
+            </div>
+        </template>
+
+        <template id="event">
+            <div class="event--details">
+                <div class="event--time"></div>
+                <div class="event--title"></div>
+            </div>
+        </template>
+    </body>
+</html>
